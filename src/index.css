@@ -8,35 +8,48 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 35 30% 97%;
+    --foreground: 25 20% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 25 20% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 25 20% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 345 70% 75%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 40 50% 90%;
+    --secondary-foreground: 25 20% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 20% 92%;
+    --muted-foreground: 25 15% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 80% 65%;
+    --accent-foreground: 25 20% 25%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 345 30% 90%;
+    --input: 345 30% 90%;
+    --ring: 345 70% 75%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+    
+    --romantic-pink: 345 70% 75%;
+    --romantic-cream: 40 50% 95%;
+    --romantic-gold: 45 80% 65%;
+    --romantic-green: 150 30% 70%;
+    
+    --gradient-romantic: linear-gradient(135deg, hsl(345 70% 85%), hsl(40 50% 95%));
+    --gradient-overlay: linear-gradient(180deg, transparent, hsl(35 30% 97% / 0.9));
+    
+    --shadow-soft: 0 10px 40px -15px hsl(345 70% 75% / 0.3);
+    --shadow-card: 0 4px 20px -5px hsl(345 50% 60% / 0.15);
+    
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +114,14 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  
+  .wedding-card {
+    @apply bg-card rounded-2xl border border-border/50 shadow-[var(--shadow-card)] backdrop-blur-sm;
+  }
+  
+  .romantic-heading {
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
   }
 }
