@@ -58,19 +58,7 @@ const BackgroundMusic: React.FC = () => {
 
   return (
     <>
-      <audio
-        ref={audioRef}
-        loop
-        preload="auto"
-        playsInline
-        // Use the imported file so Vite bundles / serves it correctly
-        src={bgm}
-        // set default volume if needed (0.0 - 1.0)
-        // on some browsers setting volume before play is allowed
-        onLoadedMetadata={() => {
-          if (audioRef.current) audioRef.current.volume = 0.6;
-        }}
-      />
+    <audio ref={audioRef} loop preload="auto" playsInline src={bgm} />
       <Button
         onClick={togglePlay}
         size="icon"
