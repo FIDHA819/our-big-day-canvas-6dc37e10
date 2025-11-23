@@ -32,7 +32,7 @@ const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
           </div>
         </div>
         
-        <h1 className="font-script text-6xl md:text-8xl romantic-heading mb-4 animate-fade-in-up">
+        <h1 className="font-script text-6xl md:text-8xl islamic-heading mb-4 animate-fade-in-up">
           Sarah & Michael
         </h1>
         

@@ -38,7 +38,7 @@ const HeroSection = () => {
       
       <div className="relative z-10 text-center px-4 animate-fade-in-up">
         <div className="space-y-6 mb-12">
-          <h1 className="font-script text-6xl md:text-8xl romantic-heading animate-float">
+          <h1 className="font-script text-7xl md:text-9xl islamic-heading animate-float">
             Sarah & Michael
           </h1>
           <div className="flex items-center justify-center gap-4">
@@ -65,8 +65,8 @@ const HeroSection = () => {
               { value: timeLeft.seconds, label: "Seconds" },
             ].map((item, index) => (
               <div key={index} className="space-y-2">
-                <div className="wedding-card p-4 md:p-6 bg-gradient-to-br from-romantic-cream to-background">
-                  <span className="font-serif text-3xl md:text-5xl font-bold romantic-heading">
+                <div className="wedding-card p-4 md:p-6 bg-gradient-to-br from-islamic-cream to-background">
+                  <span className="font-serif text-3xl md:text-5xl font-bold islamic-heading">
                     {item.value}
                   </span>
                 </div>

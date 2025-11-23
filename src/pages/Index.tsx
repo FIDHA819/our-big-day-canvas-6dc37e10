@@ -1,5 +1,6 @@
 import { useState } from "react";
 import LoadingScreen from "@/components/LoadingScreen";
+import BackgroundMusic from "@/components/BackgroundMusic";
 import HeroSection from "@/components/HeroSection";
 import CoupleSection from "@/components/CoupleSection";
 import VenueSection from "@/components/VenueSection";
@@ -15,6 +16,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen animate-fade-in">
+      <BackgroundMusic />
       <HeroSection />
       <CoupleSection />
       <VenueSection />
