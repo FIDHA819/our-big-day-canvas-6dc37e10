@@ -1,37 +1,58 @@
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import bgm from "@/assets/remo-bgm.mp3"; // rename file to remo-bgm.mp3 to be safe
 
-const BackgroundMusic = () => {
+const BackgroundMusic: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const handleInteraction = () => {
-      if (!hasInteracted) {
-        setHasInteracted(true);
-        if (audioRef.current) {
-          audioRef.current.play().catch(() => {
-            setIsPlaying(false);
-          });
-          setIsPlaying(true);
-        }
+    const handleInteraction = async () => {
+      if (hasInteracted) return;
+      setHasInteracted(true);
+
+      const audio = audioRef.current;
+      if (!audio) return;
+
+      try {
+        // try to play after user interaction
+        await audio.play();
+        setIsPlaying(true);
+      } catch (err) {
+        console.warn("Audio play failed after interaction:", err);
+        setIsPlaying(false);
       }
     };
 
-    document.addEventListener('click', handleInteraction, { once: true });
-    return () => document.removeEventListener('click', handleInteraction);
+    // listen for first user interaction (click/touch/keydown)
+    document.addEventListener("click", handleInteraction, { once: true });
+    document.addEventListener("touchstart", handleInteraction, { once: true });
+    document.addEventListener("keydown", handleInteraction, { once: true });
+
+    return () => {
+      document.removeEventListener("click", handleInteraction);
+      document.removeEventListener("touchstart", handleInteraction);
+      document.removeEventListener("keydown", handleInteraction);
+    };
   }, [hasInteracted]);
 
-  const togglePlay = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
+  const togglePlay = async () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (isPlaying) {
+      audio.pause();
+      setIsPlaying(false);
+    } else {
+      try {
+        await audio.play();
+        setIsPlaying(true);
+      } catch (err) {
+        console.warn("Play failed on toggle:", err);
+        setIsPlaying(false);
       }
-      setIsPlaying(!isPlaying);
     }
   };
 
@@ -40,7 +61,15 @@ const BackgroundMusic = () => {
       <audio
         ref={audioRef}
         loop
-        src="/path-to-your-music.mp3"
+        preload="auto"
+        playsInline
+        // Use the imported file so Vite bundles / serves it correctly
+        src={bgm}
+        // set default volume if needed (0.0 - 1.0)
+        // on some browsers setting volume before play is allowed
+        onLoadedMetadata={() => {
+          if (audioRef.current) audioRef.current.volume = 0.6;
+        }}
       />
       <Button
         onClick={togglePlay}

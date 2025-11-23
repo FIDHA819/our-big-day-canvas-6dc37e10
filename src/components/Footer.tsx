@@ -4,10 +4,10 @@ const Footer = () => {
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-6">
           <p className="font-script text-4xl romantic-heading mb-2">
-            Sarah & Michael
+            Fidha & Asif
           </p>
           <p className="font-serif text-muted-foreground">
-            June 15, 2025
+            December 20 ,2025
           </p>
         </div>
         
@@ -22,7 +22,7 @@ const Footer = () => {
         </p>
         
         <p className="font-serif text-xs text-muted-foreground/60 mt-8">
-          © 2025 Sarah & Michael. All rights reserved.
+          © cyvixx. All rights reserved.
         </p>
       </div>
     </footer>

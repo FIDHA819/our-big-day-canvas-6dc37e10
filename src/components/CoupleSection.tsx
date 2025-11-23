@@ -25,20 +25,19 @@ const CoupleSection = () => {
             <div className="relative overflow-hidden rounded-xl mb-6 aspect-[3/4]">
               <img 
                 src={brideImage} 
-                alt="Beautiful bride Sarah"
+                alt="Beautiful bride Fidha"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
             <h3 className="font-script text-4xl romantic-heading mb-3">
-              Sarah Johnson
+           Fidha Fathima 
             </h3>
             <p className="font-serif text-muted-foreground italic mb-4">
               The Bride
             </p>
             <p className="font-serif text-foreground/80 leading-relaxed">
-              A lover of art, nature, and all things beautiful. Sarah brings light and joy to everyone 
-              she meets. Her passion for creating memorable moments makes every day special.
+           D/o Mr.Hafeel & Mrs.Sabira. A compassionate and creative soul, Fidha's warmth and grace inspire everyone around her.
             </p>
           </div>
 
@@ -46,34 +45,42 @@ const CoupleSection = () => {
             <div className="relative overflow-hidden rounded-xl mb-6 aspect-[3/4]">
               <img 
                 src={groomImage} 
-                alt="Handsome groom Michael"
+                alt="Handsome groom Asif"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
             <h3 className="font-script text-4xl romantic-heading mb-3">
-              Michael Davis
-            </h3>
+             Muhammed Asif            </h3>
             <p className="font-serif text-muted-foreground italic mb-4">
               The Groom
             </p>
             <p className="font-serif text-foreground/80 leading-relaxed">
-              An adventurous soul with a heart of gold. Michael's humor and kindness light up every room. 
-              His dedication to family and friends knows no bounds.
+             S/o Mr.Haris & Mrs.Naseema. A kind-hearted and driven individual, Asif's dedication and humor light up every room he enters.
             </p>
           </div>
         </div>
 
-        <div className="wedding-card p-8 md:p-12 mt-12 bg-gradient-to-br from-romantic-cream/50 to-card text-center animate-fade-in">
-          <p className="font-script text-3xl md:text-4xl romantic-heading mb-4">
-            Our Love Story
-          </p>
-          <p className="font-serif text-foreground/80 leading-relaxed max-w-3xl mx-auto">
-            We met on a rainy September afternoon in a cozy coffee shop, where a shared love for 
-            cappuccinos and classic novels sparked an instant connection. Three years later, countless 
-            adventures, and endless laughter, we're ready to say "I do" and start our forever together.
-          </p>
-        </div>
+<div className="wedding-card p-8 md:p-12 mt-12 bg-gradient-to-br from-romantic-cream/50 to-card text-center animate-fade-in">
+
+ {/* Arabic */}
+  <p className="font-serif text-foreground/80 leading-relaxed max-w-3xl mx-auto" dir="rtl" lang="ar">
+    بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيم<br/>
+    ما شاءَ اللهُ، نتشرّف بدعوتكم لمشاركتنا هذا اليوم المبارك.<br/>
+    وجودكم ودعواتكم تزيد فرحتنا وتبارك لنا.<br/>
+    إن شاءَ الله نلتقي بكم ونحتفل معًا بهذه المناسبة السعيدة.
+  </p>
+  {/* English */}
+  <p className="font-serif text-foreground/80 leading-relaxed max-w-3xl mx-auto mb-6">
+    In the name of Allah, the Most Merciful, the Most Kind (Bismillah).
+    With hearts filled with gratitude, Masha Allah, we invite you to join us and bless our special day.
+    Your prayers, your presence, and your love mean the world to us.
+    Insha Allah, we will celebrate this joyful moment together.
+  </p>
+
+ 
+</div>
+
       </div>
     </section>
   );

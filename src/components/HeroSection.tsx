@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import heroBackground from "@/assets/hero-background.jpg";
+import ourphoto from "@/assets/ourphoto.jpg";
 
 const HeroSection = () => {
-  const weddingDate = new Date("2025-06-15T16:00:00");
+  const weddingDate = new Date("2025-12-20T16:00:00");
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   function calculateTimeLeft() {
@@ -31,7 +32,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBackground})` }}
+        style={{ backgroundImage: `url(${ourphoto})` }}
       >
         <div className="absolute inset-0 bg-background/40 backdrop-blur-sm" />
       </div>
@@ -39,7 +40,7 @@ const HeroSection = () => {
       <div className="relative z-10 text-center px-4 animate-fade-in-up">
         <div className="space-y-6 mb-12">
           <h1 className="font-script text-7xl md:text-9xl islamic-heading animate-float">
-            Sarah & Michael
+          Fidha & Asif
           </h1>
           <div className="flex items-center justify-center gap-4">
             <div className="h-px w-16 bg-gradient-to-r from-transparent via-primary to-transparent" />
@@ -49,7 +50,7 @@ const HeroSection = () => {
             <div className="h-px w-16 bg-gradient-to-r from-transparent via-primary to-transparent" />
           </div>
           <p className="font-serif text-lg md:text-xl text-foreground/80">
-            June 15, 2025
+            December 20, 2025 | 4:00 PM | 
           </p>
         </div>
 
