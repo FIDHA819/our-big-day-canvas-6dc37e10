@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import bgm from "@/assets/remo-bgm.mp3"; // rename file to remo-bgm.mp3 to be safe
+import bgm from "@/assets/Remo-bgm.mp3"; // rename file to remo-bgm.mp3 to be safe
 
 const BackgroundMusic: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
