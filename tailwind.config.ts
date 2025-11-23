@@ -47,11 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        romantic: {
-          pink: "hsl(var(--romantic-pink))",
-          cream: "hsl(var(--romantic-cream))",
-          gold: "hsl(var(--romantic-gold))",
-          green: "hsl(var(--romantic-green))",
+        islamic: {
+          emerald: "hsl(var(--islamic-emerald))",
+          gold: "hsl(var(--islamic-gold))",
+          cream: "hsl(var(--islamic-cream))",
+          teal: "hsl(var(--islamic-teal))",
+          deep: "hsl(var(--islamic-deep))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -109,8 +110,9 @@ export default {
         }
       },
       fontFamily: {
-        script: ["Great Vibes", "cursive"],
-        serif: ["Playfair Display", "serif"],
+        script: ["Arizonia", "cursive"],
+        serif: ["Cormorant Garamond", "serif"],
+        elegant: ["Cinzel", "serif"],
       },
     },
   },
