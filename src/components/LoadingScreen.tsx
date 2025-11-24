@@ -10,7 +10,7 @@ const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onLoadingComplete();
-    }, 5000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);
@@ -33,9 +33,11 @@ const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
           </div>
         </div>
         
-        <h1 className="font-script text-6xl md:text-8xl islamic-heading mb-4 animate-fade-in-up">
-        Fidha & Asif
-        </h1>
+     <h1 className="wedding-heading text-6xl md:text-8xl mb-4 animate-fade-in-up">
+  Fidha & Asif
+</h1>
+
+
         
         <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
           <div className="h-px w-16 bg-gradient-to-r from-transparent via-primary to-transparent" />

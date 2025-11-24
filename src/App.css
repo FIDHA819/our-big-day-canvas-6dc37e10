@@ -4,6 +4,10 @@
   padding: 2rem;
   text-align: center;
 }
+.font-cinzel {
+  font-family: 'Cinzel Decorative', serif !important;
+}
+
 
 .logo {
   height: 6em;
